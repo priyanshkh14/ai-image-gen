@@ -13,7 +13,8 @@ const Container = styled.div`
   color: ${({ theme }) => theme.text_primary};
   overflow-x: hidden;
   overflow-y: hidden;
-  transition: all 0.2s ease;`
+  transition: all 0.2s ease;
+`;
 
 const Wrapper = styled.div`
   height: 100%;
@@ -21,7 +22,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 3;`
+  flex: 3;
+`;
 
 function App() {
   return (
@@ -29,13 +31,13 @@ function App() {
       <Container>
         <Wrapper>
           <BrowserRouter>
-          <Navbar/>
+            <Navbar/>
             <Routes>
               <Route path="/" element={<Home />} exact/>
               <Route path="/post" element={<CreatePost />} exact/>
             </Routes>
           </BrowserRouter>
-          <Home/>
+          {/* <Home/> */}
           <CreatePost/>
         </Wrapper>
       </Container>
