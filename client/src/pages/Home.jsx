@@ -62,22 +62,28 @@ const CardWrapper = style.div`
 `;
 
 const Home = () => {
+  const item = {
+    photo: 'https://media.istockphoto.com/id/157403457/photo/um-el-ma-oasis-mandara-lake-libyan-sahara-desert-africa.jpg?s=612x612&w=0&k=20&c=xiO5W6wWwSiD33BFM2LoYqXeBFFydsE5lMgw4WN2dNo=',
+    author: 'Priyansh',
+    prompt:'desert',
+  }
   return (
     <Container>
-      <Headline>Explore popular posts!
-        <Span>♦ Generate with AI ♦</Span>
+      <Headline>Explore popular posts in the Community!
+        <Span>Turn texts into images in seconds</Span>
       </Headline>
       <SearchBar />
       <Wrapper>
         <CardWrapper>
-          <ImageCard/>
-          <ImageCard/>
-          <ImageCard/>
-          <ImageCard/>
-          <ImageCard/>
-          <ImageCard/>
-          <ImageCard/>
-          <ImageCard/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
+          <ImageCard item={item}/>
         </CardWrapper>
       </Wrapper>
     </Container>

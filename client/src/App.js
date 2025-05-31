@@ -33,16 +33,15 @@ function App() {
           <BrowserRouter>
             <Navbar/>
             <Routes>
-              <Route path="/" element={<Home />} exact/>
-              <Route path="/post" element={<CreatePost />} exact/>
+              <Route path="/" element={<Home />} />
+              <Route path="/post" element={<CreatePost />} />
             </Routes>
           </BrowserRouter>
-          {/* <Home/> */}
-          <CreatePost/>
         </Wrapper>
       </Container>
     </ThemeProvider>
   );
 }
+
 
 export default App;
