@@ -5,19 +5,23 @@ import { AddRounded, ExploreRounded } from "@mui/icons-material"
 import Button from "./button"
 
 const Container = styled.div`
-  flex: 1;
+  height: 60px;
+  flex-shrink: 0;
   background-color: ${({ theme }) => theme.navbar};
   color: ${({ theme }) => theme.text_primary};
   font-weight: bold;
-  font-size: 22px;
-  padding: 14px 50px;
+  font-size: 18px;
+  padding: 12px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
   @media only screen and (max-width: 600px) {
     padding: 10px 12px;
-  }`
+  }
+`;
+
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -28,7 +32,7 @@ const Navbar = () => {
         DreamPixel{
             path[1] === "post" ? ( 
                 <Button
-                onClick={() =>  navigate("/post")}
+                onClick={() =>  navigate("/")}
                 text="Explore Post"
                 leftIcon={
                     <ExploreRounded

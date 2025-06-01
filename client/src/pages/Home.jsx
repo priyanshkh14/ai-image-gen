@@ -41,11 +41,8 @@ const Span = style.div`
 const Wrapper = style.div`
   width: 100%;
   max-width: 1400px;
-  background-color: ${({ theme }) => theme.bgLight};
-  border-radius: 10px;
   padding: 32px 0px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 `;
 

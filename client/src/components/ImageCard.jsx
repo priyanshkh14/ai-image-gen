@@ -40,9 +40,12 @@ const HoverOverlay = styled.div`
     justify-content: end;
     padding: 12px;
 
+    opacity: 0;
+    pointer-events: none;
 
     ${Card}:hover & {
         opacity: 1;
+        pointer-events: auto;
     }
 `;
 
@@ -64,7 +67,7 @@ const Author = styled.div`
 const ImageCard = ({item}) => {
   return (
     <Card>
-        <LazyLoadImage width='100%' src={item?.photo}/>
+        <LazyLoadImage alt={item?.prompt} style={{borderRadius: '10px'}} width='100%' src={item?.photo}/>
         <HoverOverlay>
             <Prompt>{item?.prompt}</Prompt>
             <div style={{
